@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>545D4A3D-07E9-4F50-9B60-B3B8E305D067</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Basics</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E93E8D84F7B001B5D8C3E4821D56C620FCF177DC</key>
+		<string>https://github.com/mollietaylor/basics.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Basics.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E93E8D84F7B001B5D8C3E4821D56C620FCF177DC</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mollietaylor/basics.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E93E8D84F7B001B5D8C3E4821D56C620FCF177DC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E93E8D84F7B001B5D8C3E4821D56C620FCF177DC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Basics</string>
+		</dict>
+	</array>
+</dict>
+</plist>
