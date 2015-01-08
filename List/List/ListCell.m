@@ -72,6 +72,13 @@
         } else if (colorView.backgroundColor == [UIColor greenColor]) {
             colorView.backgroundColor = [UIColor redColor];
         }
+    } else {
+//        // move this somewhere
+//        isDone = [self.itemInfo[@"done"] boolValue];
+//        
+//        if (!isDone) {
+//            self.itemInfo[@"done"] = @YES;
+//        }
     }
     
     NSLog(@"Touch in cell.");

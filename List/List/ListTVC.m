@@ -25,86 +25,86 @@
     
     if (self) {
         listItems = [[NSMutableArray alloc] initWithArray:@[
-                                                           
-           @{
+                                                            
+            @{
+                @"text":@"Item 3",
+                @"color": [UIColor redColor],
+                @"done": @NO
+                },
+            @{
+                @"text":@"Item 2",
+                @"date":@"Jan 6, 2015",
+                @"color": [UIColor yellowColor],
+                @"done": @NO
+                },
+            @{
+                @"text":@"Item 1",
+                @"date":@"Jan 3, 2015",
+                @"color": [UIColor redColor],
+                @"done": @NO
+                },
+            @{
                @"text":@"Change font",
                @"date":@"Jan 7, 2015",
                @"color":[UIColor greenColor],
                @"done":@YES
                },
-           @{
+            @{
                @"text":@"Round icons",
                @"color": [UIColor redColor],
                @"done": @YES
                },
-           @{
+            @{
                @"text":@"Understand strikethrough code",
                @"color": [UIColor yellowColor],
                @"done": @YES
                },
-           @{
+            @{
                @"text":@"Change row height",
                @"date":@"Jan 7, 2015",
                @"color":[UIColor greenColor],
                @"done":@YES
                },
-           @{
+            @{
                @"text":@"Full separator",
                @"date":@"Jan 6, 2015",
                @"color": [UIColor redColor],
                @"done": @YES
                },
-           @{
+            @{
                @"text":@"Listen for cell touches",
                @"color": [UIColor greenColor],
                @"done": @YES
                },
-           @{
+            @{
                @"text":@"Listen for colorView touches",
                @"color":[UIColor greenColor],
                @"done":@YES
                },
-           @{
+            @{
                @"text":@"colorView touches change color",
                @"color":[UIColor redColor],
                @"done":@YES
                },
-           @{
+            @{
                @"text":@"Add 10 items to array",
                @"color": [UIColor yellowColor],
                @"done": @YES
                },
-           @{
+            @{
                @"text":@"Add swipe to delete graphic",
                @"color": [UIColor yellowColor],
                @"done": @YES
                },
-           @{
+            @{
                @"text":@"Make array mutable",
                @"color":[UIColor greenColor],
                @"done":@YES
                },
-           @{
+            @{
                @"text":@"Make swipe-to-delete work",
                @"color":[UIColor greenColor],
                @"done":@YES
-               },
-           @{
-               @"text":@"Item 3",
-               @"color": [UIColor redColor],
-               @"done": @NO
-               },
-           @{
-               @"text":@"Item 2",
-               @"date":@"Jan 6, 2015",
-               @"color": [UIColor yellowColor],
-               @"done": @NO
-               },
-           @{
-               @"text":@"Item 1",
-               @"date":@"Jan 3, 2015",
-               @"color": [UIColor redColor],
-               @"done": @NO
                }
            
            ]
