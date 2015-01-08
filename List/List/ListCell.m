@@ -44,6 +44,9 @@
     isDone = [itemInfo[@"done"] boolValue];
     
     if (isDone) {
+        colorView.backgroundColor = [UIColor blackColor];
+        colorView.layer.borderColor = [UIColor whiteColor].CGColor;
+        colorView.layer.borderWidth = 1.0f;
         NSDictionary* attributes = @{
                                      NSStrikethroughStyleAttributeName: [NSNumber numberWithInt:NSUnderlineStyleSingle]
                                      };
@@ -62,6 +65,13 @@
     
     if (CGRectContainsPoint(colorView.frame, touchLocation)) {
         NSLog(@"Touch in colorView.");
+        if (colorView.backgroundColor == [UIColor redColor]) {
+            colorView.backgroundColor = [UIColor yellowColor];
+        } else if (colorView.backgroundColor == [UIColor yellowColor]) {
+            colorView.backgroundColor = [UIColor greenColor];
+        } else if (colorView.backgroundColor == [UIColor greenColor]) {
+            colorView.backgroundColor = [UIColor redColor];
+        }
     }
     
     NSLog(@"Touch in cell.");

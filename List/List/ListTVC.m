@@ -65,6 +65,11 @@
                @"done":@YES
                },
            @{
+               @"text":@"colorView touches change color",
+               @"color":[UIColor redColor],
+               @"done":@YES
+               },
+           @{
                @"text":@"Add 10 items to array",
                @"color": [UIColor yellowColor],
                @"done": @YES
@@ -225,35 +230,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
-
--(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    
-    // get touch event
-    UITouch *touch = [[event allTouches] anyObject];
-    
-    // get the touch location
-    CGPoint touchLocation = [touch locationInView:touch.view];
-    
-    NSLog(@"%@", touch);
-    
-    // move the image view
-//    image.center = touchLocation;
-    
-//    CGPoint location = [[touches anyObject] locationInView:self.view];
-//    CGRect fingerRect = CGRectMake(location.x-5, location.y-5, 10, 10);
-//    
-//    for(UIView *view in self.view.subviews){
-//        CGRect subviewFrame = view.frame;
-//        
-//        if(CGRectIntersectsRect(fingerRect, subviewFrame)){
-//            //we found the finally touched view
-//            NSLog(@"Yeah !, i found it %@",view);
-//        }
-    
-//    }
-    
-}
 
 @end
