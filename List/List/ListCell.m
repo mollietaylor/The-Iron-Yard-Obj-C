@@ -25,8 +25,7 @@
     if (self) {
         
         colorView = [[UIView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 30, 20, 20, 20)];
-//        colorView.layer.cornerRadius = self.frame.size.width / 2;
-//        colorView.layer.masksToBounds = YES;
+        colorView.layer.cornerRadius = colorView.bounds.size.width / 2;
         
         [self.contentView addSubview:colorView];
         
@@ -55,6 +54,17 @@
     
     _itemInfo = itemInfo;
     
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    UITouch *touch = [[event allTouches] anyObject];
+    CGPoint touchLocation = [touch locationInView:self];
+    
+    if (CGRectContainsPoint(colorView.frame, touchLocation)) {
+        NSLog(@"Touch in colorView.");
+    }
+    
+    NSLog(@"Touch in cell.");
 }
 
 @end

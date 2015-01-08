@@ -34,12 +34,12 @@
                },
            @{
                @"text":@"Round icons",
-               @"color": [UIColor orangeColor],
-               @"done": @NO
+               @"color": [UIColor redColor],
+               @"done": @YES
                },
            @{
                @"text":@"Understand strikethrough code",
-               @"color": [UIColor purpleColor],
+               @"color": [UIColor yellowColor],
                @"done": @YES
                },
            @{
@@ -51,27 +51,27 @@
            @{
                @"text":@"Full separator",
                @"date":@"Jan 6, 2015",
-               @"color": [UIColor greenColor],
+               @"color": [UIColor redColor],
                @"done": @YES
                },
            @{
                @"text":@"Listen for cell touches",
                @"color": [UIColor greenColor],
-               @"done": @NO
+               @"done": @YES
                },
            @{
                @"text":@"Listen for colorView touches",
                @"color":[UIColor greenColor],
-               @"done":@NO
+               @"done":@YES
                },
            @{
                @"text":@"Add 10 items to array",
-               @"color": [UIColor purpleColor],
+               @"color": [UIColor yellowColor],
                @"done": @YES
                },
            @{
-               @"text":@"Add swipe to delete",
-               @"color": [UIColor purpleColor],
+               @"text":@"Add swipe to delete graphic",
+               @"color": [UIColor yellowColor],
                @"done": @YES
                },
            @{
@@ -80,21 +80,26 @@
                @"done":@YES
                },
            @{
+               @"text":@"Make swipe-to-delete work",
+               @"color":[UIColor greenColor],
+               @"done":@YES
+               },
+           @{
                @"text":@"Item 3",
-               @"color": [UIColor orangeColor],
-               @"done": @YES
+               @"color": [UIColor redColor],
+               @"done": @NO
                },
            @{
                @"text":@"Item 2",
                @"date":@"Jan 6, 2015",
-               @"color": [UIColor purpleColor],
-               @"done": @YES
+               @"color": [UIColor yellowColor],
+               @"done": @NO
                },
            @{
-               @"text":@"Long Item Name",
+               @"text":@"Item 1",
                @"date":@"Jan 3, 2015",
-               @"color": [UIColor orangeColor],
-               @"done": @YES
+               @"color": [UIColor redColor],
+               @"done": @NO
                }
            
            ]
@@ -108,6 +113,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor blackColor];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -187,7 +194,9 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
+        [listItems removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [tableView reloadData];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
@@ -216,5 +225,35 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    
+    // get touch event
+    UITouch *touch = [[event allTouches] anyObject];
+    
+    // get the touch location
+    CGPoint touchLocation = [touch locationInView:touch.view];
+    
+    NSLog(@"%@", touch);
+    
+    // move the image view
+//    image.center = touchLocation;
+    
+//    CGPoint location = [[touches anyObject] locationInView:self.view];
+//    CGRect fingerRect = CGRectMake(location.x-5, location.y-5, 10, 10);
+//    
+//    for(UIView *view in self.view.subviews){
+//        CGRect subviewFrame = view.frame;
+//        
+//        if(CGRectIntersectsRect(fingerRect, subviewFrame)){
+//            //we found the finally touched view
+//            NSLog(@"Yeah !, i found it %@",view);
+//        }
+    
+//    }
+    
+}
 
 @end
