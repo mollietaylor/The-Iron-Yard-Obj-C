@@ -21,22 +21,4 @@
     // Configure the view for the selected state
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    
-    UINavigationController *nC = [[UINavigationController alloc] init];
-    
-    FriendDetailVC *friendDetailVC = [[FriendDetailVC alloc] init];
-    
-    friendDetailVC.view.backgroundColor = [UIColor colorWithRed:0.94 green:0.45 blue:0 alpha:1];
-    
-    NSString *name = self.textLabel.text;
-    
-    friendDetailVC.friendInfo[@"login"] = name;
-    
-    nC.viewControllers = @[friendDetailVC];
-    
-    [nC pushViewController:friendDetailVC animated:YES];
-    
-}
-
 @end

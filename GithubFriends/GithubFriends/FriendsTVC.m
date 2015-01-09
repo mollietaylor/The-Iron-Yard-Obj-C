@@ -117,6 +117,18 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    FriendDetailVC *detailVC = [[FriendDetailVC alloc] init];
+    
+    detailVC.friendInfo = friends[indexPath.row];
+    
+    [self.navigationController pushViewController:detailVC animated:YES];
+    
+    
+    
+}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

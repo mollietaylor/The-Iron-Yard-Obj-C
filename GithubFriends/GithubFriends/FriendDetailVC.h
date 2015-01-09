@@ -10,6 +10,6 @@
 
 @interface FriendDetailVC : UIViewController
 
-@property (nonatomic) NSMutableDictionary *friendInfo;
+@property (nonatomic) NSDictionary *friendInfo;
 
 @end

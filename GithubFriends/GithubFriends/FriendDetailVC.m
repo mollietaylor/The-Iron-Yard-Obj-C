@@ -8,30 +8,59 @@
 
 #import "FriendDetailVC.h"
 
-@interface FriendDetailVC ()
+@interface FriendDetailVC () <UITableViewDelegate, UITableViewDataSource>
 
 @end
 
 @implementation FriendDetailVC
+{
+    NSArray *repos;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//    NSString *username = self.friendInfo[@"login"];
-//    
-//    NSString *urlString = [NSString stringWithFormat:@"https://api.github.com/users/%@/repos", username];
-//    NSURL *url = [NSURL URLWithString:urlString];
-//    
-//    NSLog(@"%@", url);
+    self.view.backgroundColor = [UIColor whiteColor];
     
-//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-//    
-//    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
-//    
-//    NSArray *userRepos = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:nil];
-//    
-//    NSLog(@"%@", userRepos);
+    NSString *username = self.friendInfo[@"login"];
+    
+    NSString *urlString = [NSString stringWithFormat:@"https://api.github.com/users/%@/repos", username];
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    NSLog(@"%@", url);
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    
+    repos = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:nil];
+    
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 50, 320, 518) style:UITableViewStylePlain];
+
+    tableView.delegate = self;
+    tableView.dataSource = self;
+    
+    [self.view addSubview:tableView];
+    
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
+    
+    cell.textLabel.text = repos[indexPath.row][@"name"];
+    
+    if (repos[indexPath.row][@"description"] != [NSNull null]) {
+        cell.detailTextLabel.text = repos[indexPath.row][@"description"];
+    }
+    
+    return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return repos.count;
 }
 
 - (void)didReceiveMemoryWarning {
