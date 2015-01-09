@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		ECA0CD6D1A5EC9DF004F6981 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA0CD6C1A5EC9DF004F6981 /* main.m */; };
 		ECA0CD701A5EC9DF004F6981 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA0CD6F1A5EC9DF004F6981 /* AppDelegate.m */; };
-		ECA0CD731A5EC9DF004F6981 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA0CD721A5EC9DF004F6981 /* ViewController.m */; };
-		ECA0CD761A5EC9DF004F6981 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECA0CD741A5EC9DF004F6981 /* Main.storyboard */; };
 		ECA0CD781A5EC9DF004F6981 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA0CD771A5EC9DF004F6981 /* Images.xcassets */; };
 		ECA0CD7B1A5EC9DF004F6981 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECA0CD791A5EC9DF004F6981 /* LaunchScreen.xib */; };
 		ECA0CD871A5EC9DF004F6981 /* GithubFriendsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA0CD861A5EC9DF004F6981 /* GithubFriendsTests.m */; };
+		ECA0CD921A5ECB81004F6981 /* FriendsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA0CD911A5ECB81004F6981 /* FriendsTVC.m */; };
+		ECA0CD951A5ECB98004F6981 /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA0CD941A5ECB98004F6981 /* FriendCell.m */; };
+		ECA0CD981A5EE351004F6981 /* NewFriendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA0CD971A5EE351004F6981 /* NewFriendVC.m */; };
+		ECA0CD9B1A5EE371004F6981 /* FriendDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA0CD9A1A5EE371004F6981 /* FriendDetailVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +34,19 @@
 		ECA0CD6C1A5EC9DF004F6981 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ECA0CD6E1A5EC9DF004F6981 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ECA0CD6F1A5EC9DF004F6981 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		ECA0CD711A5EC9DF004F6981 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		ECA0CD721A5EC9DF004F6981 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		ECA0CD751A5EC9DF004F6981 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECA0CD771A5EC9DF004F6981 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		ECA0CD7A1A5EC9DF004F6981 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		ECA0CD801A5EC9DF004F6981 /* GithubFriendsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubFriendsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA0CD851A5EC9DF004F6981 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECA0CD861A5EC9DF004F6981 /* GithubFriendsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GithubFriendsTests.m; sourceTree = "<group>"; };
+		ECA0CD901A5ECB81004F6981 /* FriendsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsTVC.h; sourceTree = "<group>"; };
+		ECA0CD911A5ECB81004F6981 /* FriendsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsTVC.m; sourceTree = "<group>"; };
+		ECA0CD931A5ECB98004F6981 /* FriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendCell.h; sourceTree = "<group>"; };
+		ECA0CD941A5ECB98004F6981 /* FriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendCell.m; sourceTree = "<group>"; };
+		ECA0CD961A5EE351004F6981 /* NewFriendVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewFriendVC.h; sourceTree = "<group>"; };
+		ECA0CD971A5EE351004F6981 /* NewFriendVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewFriendVC.m; sourceTree = "<group>"; };
+		ECA0CD991A5EE371004F6981 /* FriendDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendDetailVC.h; sourceTree = "<group>"; };
+		ECA0CD9A1A5EE371004F6981 /* FriendDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendDetailVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +88,11 @@
 		ECA0CD691A5EC9DF004F6981 /* GithubFriends */ = {
 			isa = PBXGroup;
 			children = (
-				ECA0CD6E1A5EC9DF004F6981 /* AppDelegate.h */,
-				ECA0CD6F1A5EC9DF004F6981 /* AppDelegate.m */,
-				ECA0CD711A5EC9DF004F6981 /* ViewController.h */,
-				ECA0CD721A5EC9DF004F6981 /* ViewController.m */,
-				ECA0CD741A5EC9DF004F6981 /* Main.storyboard */,
-				ECA0CD771A5EC9DF004F6981 /* Images.xcassets */,
-				ECA0CD791A5EC9DF004F6981 /* LaunchScreen.xib */,
+				ECA0CD9C1A5EE3A8004F6981 /* Friends List */,
+				ECA0CD961A5EE351004F6981 /* NewFriendVC.h */,
+				ECA0CD971A5EE351004F6981 /* NewFriendVC.m */,
+				ECA0CD991A5EE371004F6981 /* FriendDetailVC.h */,
+				ECA0CD9A1A5EE371004F6981 /* FriendDetailVC.m */,
 				ECA0CD6A1A5EC9DF004F6981 /* Supporting Files */,
 			);
 			path = GithubFriends;
@@ -96,6 +101,10 @@
 		ECA0CD6A1A5EC9DF004F6981 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				ECA0CD6E1A5EC9DF004F6981 /* AppDelegate.h */,
+				ECA0CD6F1A5EC9DF004F6981 /* AppDelegate.m */,
+				ECA0CD771A5EC9DF004F6981 /* Images.xcassets */,
+				ECA0CD791A5EC9DF004F6981 /* LaunchScreen.xib */,
 				ECA0CD6B1A5EC9DF004F6981 /* Info.plist */,
 				ECA0CD6C1A5EC9DF004F6981 /* main.m */,
 			);
@@ -117,6 +126,17 @@
 				ECA0CD851A5EC9DF004F6981 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ECA0CD9C1A5EE3A8004F6981 /* Friends List */ = {
+			isa = PBXGroup;
+			children = (
+				ECA0CD901A5ECB81004F6981 /* FriendsTVC.h */,
+				ECA0CD911A5ECB81004F6981 /* FriendsTVC.m */,
+				ECA0CD931A5ECB98004F6981 /* FriendCell.h */,
+				ECA0CD941A5ECB98004F6981 /* FriendCell.m */,
+			);
+			name = "Friends List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +219,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECA0CD761A5EC9DF004F6981 /* Main.storyboard in Resources */,
 				ECA0CD7B1A5EC9DF004F6981 /* LaunchScreen.xib in Resources */,
 				ECA0CD781A5EC9DF004F6981 /* Images.xcassets in Resources */,
 			);
@@ -219,9 +238,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECA0CD731A5EC9DF004F6981 /* ViewController.m in Sources */,
 				ECA0CD701A5EC9DF004F6981 /* AppDelegate.m in Sources */,
+				ECA0CD981A5EE351004F6981 /* NewFriendVC.m in Sources */,
+				ECA0CD921A5ECB81004F6981 /* FriendsTVC.m in Sources */,
+				ECA0CD9B1A5EE371004F6981 /* FriendDetailVC.m in Sources */,
 				ECA0CD6D1A5EC9DF004F6981 /* main.m in Sources */,
+				ECA0CD951A5ECB98004F6981 /* FriendCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,14 +266,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		ECA0CD741A5EC9DF004F6981 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ECA0CD751A5EC9DF004F6981 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ECA0CD791A5EC9DF004F6981 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NewFriendVC.h
 //  GithubFriends
 //
 //  Created by Mollie on 1/8/15.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface NewFriendVC : UIViewController
 
+@property (nonatomic) NSMutableArray *friends;
 
 @end
-
