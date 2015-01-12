@@ -18,7 +18,7 @@
 @implementation ViewController
 {
     int playerTurn;
-    int turn;
+    int gameNumber;
     
     NSMutableArray *squares;
     
@@ -28,13 +28,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    playerTurn = 1;
-    
-    turn = 0;
-    
-    squares = [@[@"", @"", @"", @"", @"", @"", @"", @"", @"", @""] mutableCopy];
+    [self resetGame];
     
     buttons = [@[] mutableCopy];
+    
+    gameNumber = 0;
     
     int rowCount = 3;
     int colCount = 3;
@@ -92,28 +90,13 @@
     }
     
     playerTurn = (playerTurn == 2) ? 1 : 2;
-    
-    
-    
-    
-//#warning There must be a better way to do this
-//    if ([button.titleLabel.text isEqualToString:@"X"] || [button.titleLabel.text isEqualToString:@"O"]) {
-//        // nothing
-//    } else {
-//        if (turn %2 == 1) {
-//            [button setTitle:@"X" forState:UIControlStateNormal];
-//            squares[button.tag] = @"O";
-//        } else {
-//            [button setTitle:@"O" forState:UIControlStateNormal];
-//        }
-//        turn++;
-//        NSLog(@"%@", squares);
-//    }
+
     
 }
 
 - (void)checkForWin {
     
+    // check for win
     NSArray *winPossibilies = @[
                              // rows
                              @[@0,@1,@2],
@@ -134,6 +117,23 @@
         
     }
     
+    #warning A win on the last move counts as a draw and a win
+    [self checkForDraw];
+    
+}
+
+- (void)checkForDraw {
+    
+    NSNumber *min = [squares valueForKeyPath:@"@min.self"];
+    NSLog(@"%@", min);
+    
+    if (![squares containsObject:@0]) {
+        NSString *message = [NSString stringWithFormat:@"The game was a draw."];
+        UIAlertView *alertViewDraw = [[UIAlertView alloc] initWithTitle:@"Draw" message:message delegate:self cancelButtonTitle:@"Play Again" otherButtonTitles:nil];
+        [alertViewDraw show];
+        gameNumber++;
+    }
+    
 }
 
 - (void)checkWinPossibility:(NSArray *)winPossibility withPlayer:(int)player {
@@ -152,6 +152,7 @@
             self.player2ScoreLabel.text = [NSString stringWithFormat:@"Player 2: %d", self.player2Score];
         }
         [alertView show];
+        gameNumber++;
     }
     
 }
@@ -163,9 +164,15 @@
         button.backgroundColor = [UIColor colorWithRed:0.97 green:0.71 blue:0.05 alpha:1];
     }
     
-    playerTurn = 1;
+    [self resetGame];
     
-    turn = 0;
+}
+
+# pragma mark - Reset game
+
+- (void)resetGame {
+    
+    playerTurn = gameNumber % 2 + 1;
     
     squares = [@[
                  @0, @0, @0,
@@ -174,6 +181,8 @@
                  ] mutableCopy];
     
 }
+
+# pragma mark - Reset score
 
 - (IBAction)resetButtonPressed:(id)sender {
     self.player1ScoreLabel.text = @"Player 1: 0";

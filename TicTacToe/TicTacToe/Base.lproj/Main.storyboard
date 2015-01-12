@@ -36,12 +36,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uvg-eM-2Us">
-                                <rect key="frame" x="16" y="562" width="568" height="30"/>
+                                <rect key="frame" x="225" y="562" width="150" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Sk6-fR-U9y"/>
+                                    <constraint firstAttribute="width" constant="150" id="ZAz-zn-hxl"/>
                                 </constraints>
                                 <state key="normal" title="Reset Scores">
-                                    <color key="titleColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -54,6 +56,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Uvg-eM-2Us" secondAttribute="trailing" id="2Uo-7b-TW4"/>
                             <constraint firstItem="6BN-Zk-MDr" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="G5M-la-oHg"/>
                             <constraint firstItem="6BN-Zk-MDr" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="HoF-ky-hoH"/>
+                            <constraint firstAttribute="centerX" secondItem="Uvg-eM-2Us" secondAttribute="centerX" id="J12-mW-Vgi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LVc-PK-dIh" secondAttribute="trailing" id="RfA-0M-Xun"/>
                             <constraint firstItem="LVc-PK-dIh" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="ULG-Qu-OO2"/>
                             <constraint firstItem="6BN-Zk-MDr" firstAttribute="width" secondItem="LVc-PK-dIh" secondAttribute="width" id="c3M-ua-SfK"/>
@@ -61,6 +64,12 @@
                             <constraint firstItem="LVc-PK-dIh" firstAttribute="leading" secondItem="6BN-Zk-MDr" secondAttribute="trailing" constant="10" id="qoG-g0-G93"/>
                             <constraint firstItem="Uvg-eM-2Us" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="xql-98-15g"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2Uo-7b-TW4"/>
+                                <exclude reference="xql-98-15g"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="player1ScoreLabel" destination="6BN-Zk-MDr" id="uu4-DL-ljw"/>
