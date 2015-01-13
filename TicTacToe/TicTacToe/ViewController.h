@@ -10,9 +10,6 @@
 
 @interface ViewController : UIViewController
 
-@property (nonatomic) int player1Score;
-@property (nonatomic) int player2Score;
-
 
 @end
 

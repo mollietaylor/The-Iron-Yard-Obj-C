@@ -8,7 +8,13 @@
 
 #import "ViewController.h"
 
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+
 @interface ViewController () <UIAlertViewDelegate>
+
+@property (nonatomic) int player1Score;
+@property (nonatomic) int player2Score;
+@property (nonatomic) BOOL winner;
 
 @property (weak, nonatomic) IBOutlet UILabel *player1ScoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *player2ScoreLabel;
@@ -25,6 +31,16 @@
     NSMutableArray *buttons;
 }
 
+- (void)setPlayer1Score:(int)player1Score {
+    self.player1ScoreLabel.text = [NSString stringWithFormat:@"Player 1: %d", player1Score];
+    _player1Score = player1Score;
+}
+
+- (void)setPlayer2Score:(int)player2Score {
+    self.player2ScoreLabel.text = [NSString stringWithFormat:@"Player 2: %d", player2Score];
+    _player2Score = player2Score;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -37,10 +53,12 @@
     int rowCount = 3;
     int colCount = 3;
     
-    CGRect screenBound = [[UIScreen mainScreen] bounds];
-    CGFloat screenWidth = screenBound.size.width;
+    CGFloat screenWidth = SCREEN_WIDTH;
     
-    CGFloat width = (screenWidth - 40) / 3;
+    CGFloat innerPadding = 1;
+    CGFloat outerPadding = 40;
+    
+    CGFloat width = (screenWidth - 2 * innerPadding - 2 * outerPadding) / 3;
     CGFloat height = width;
     
     int buttonCount = 0;
@@ -49,8 +67,8 @@
         
         for (int c = 0; c < colCount; c++) {
             
-            CGFloat x = c * (width + 10) + 10;
-            CGFloat y = r * (height + 10) + 10 + 20 + 50;
+            CGFloat x = c * (width + innerPadding) + outerPadding;
+            CGFloat y = r * (height + innerPadding) + 10 + 20 + 50;
             
             UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(x, y, width, height)];
             
@@ -111,21 +129,23 @@
                              @[@2,@4,@6]
                              ];
     
+    self.winner = NO;
     for (NSArray *winPossibility in winPossibilies) {
+        
+# warning If you win in a corner, it counts as 2 wins
+        // while self.winner = NO:
         [self checkWinPossibility:winPossibility withPlayer:1];
         [self checkWinPossibility:winPossibility withPlayer:2];
         
     }
     
-    #warning A win on the last move counts as a draw and a win
-    [self checkForDraw];
+    if (self.winner == NO) {
+        [self checkForDraw];
+    }
     
 }
 
 - (void)checkForDraw {
-    
-    NSNumber *min = [squares valueForKeyPath:@"@min.self"];
-    NSLog(@"%@", min);
     
     if (![squares containsObject:@0]) {
         NSString *message = [NSString stringWithFormat:@"The game was a draw."];
@@ -137,6 +157,7 @@
 }
 
 - (void)checkWinPossibility:(NSArray *)winPossibility withPlayer:(int)player {
+    
     BOOL playerInSquare1 = ([squares[[winPossibility[0] intValue]] intValue] == player);
     BOOL playerInSquare2 = ([squares[[winPossibility[1] intValue]] intValue] == player);
     BOOL playerInSquare3 = ([squares[[winPossibility[2] intValue]] intValue] == player);
@@ -146,11 +167,10 @@
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Winner" message:message delegate:self cancelButtonTitle:@"Play Again" otherButtonTitles:nil];
         if (player == 1) {
             self.player1Score++;
-            self.player1ScoreLabel.text = [NSString stringWithFormat:@"Player 1: %d", self.player1Score];
         } else {
             self.player2Score++;
-            self.player2ScoreLabel.text = [NSString stringWithFormat:@"Player 2: %d", self.player2Score];
         }
+        self.winner = YES;
         [alertView show];
         gameNumber++;
     }
