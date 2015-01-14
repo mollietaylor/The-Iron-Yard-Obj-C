@@ -16,11 +16,37 @@
 @implementation ViewController
 {
     NSMutableDictionary *currentScribble;
+    UIColor *selectedColor;
+    UIColor *selectedFillColor;
+    int selectedStrokeWidth;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    selectedColor = [UIColor blackColor];
+    selectedFillColor = [UIColor clearColor];
+    selectedStrokeWidth = 1;
+    
+}
+
+- (IBAction)changeColor:(UIButton *)sender {
+    
+    selectedColor = sender.backgroundColor;
+    
+}
+
+- (IBAction)changeFillColor:(UIButton *)sender {
+    
+    selectedFillColor = sender.backgroundColor;
+    
+}
+
+- (IBAction)changeStrokeWidth:(UISlider *)sender {
+    
+    selectedStrokeWidth = sender.value;
+    
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -32,9 +58,9 @@
     currentScribble = [@{
                          
                          @"type":@"path",
-                         @"fillColor":[UIColor clearColor],
-                         @"strokeColor":[UIColor blackColor],
-                         @"strokeWidth":@4,
+                         @"fillColor":selectedFillColor,
+                         @"strokeColor":selectedColor,
+                         @"strokeWidth":@(selectedStrokeWidth),
                          // when we touch, we start with one point
                          @"points":[@[[NSValue valueWithCGPoint:location]] mutableCopy]
                          

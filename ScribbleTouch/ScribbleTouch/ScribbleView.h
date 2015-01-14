@@ -10,6 +10,8 @@
 
 @interface ScribbleView : UIView
 
+@property (nonatomic) UIColor *fillColor;
+
 @property (nonatomic) NSMutableArray *scribbles;
 
 @end

@@ -46,6 +46,9 @@
     // Drawing code
     
     CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetLineJoin(context, kCGLineJoinRound);
+    CGContextSetLineCap(context, kCGLineCapRound);
 //
 //    CGContextSetLineWidth(context, 10);
 //    
@@ -63,6 +66,7 @@
     
     for (NSDictionary *scribble in self.scribbles) {
         
+#pragma mark - strokeColor
         CGContextSetLineWidth(context, [scribble[@"strokeWidth"] floatValue]);
         
         UIColor *strokeColor = scribble[@"strokeColor"];
@@ -79,6 +83,22 @@
         }
         
         CGContextStrokePath(context);
+        
+        
+#pragma mark - fillColor
+        UIColor *fillColor = scribble[@"fillColor"];
+        [fillColor set];
+        
+        CGContextMoveToPoint(context, firstPoint.x, firstPoint.y);
+        
+        for (NSValue *pointValue in scribble[@"points"]) {
+            
+            CGPoint point = [pointValue CGPointValue];
+            CGContextAddLineToPoint(context, point.x, point.y);
+            
+        }
+        
+        CGContextFillPath(context);
         
     }
     
