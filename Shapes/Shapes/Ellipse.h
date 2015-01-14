@@ -1,5 +1,5 @@
 //
-//  Rectangle.h
+//  Ellipse.h
 //  Shapes
 //
 //  Created by Mollie on 1/13/15.
@@ -8,6 +8,6 @@
 
 #import "Shape.h"
 
-@interface Rectangle : Shape
+@interface Ellipse : Shape
 
 @end

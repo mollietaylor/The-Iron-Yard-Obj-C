@@ -10,31 +10,31 @@
 	<string>Human</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>5E96A331F4A9398030FDB02675060CE744F6A9D2</key>
-		<string>https://github.com/mollietaylor/Human.git</string>
+		<key>389DFBB2BEA69128F45498211E7D616E671F394B</key>
+		<string>https://github.com/mollietaylor/The-Iron-Yard-Obj-C.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Human.xcodeproj</string>
+	<string>Human/Human.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>5E96A331F4A9398030FDB02675060CE744F6A9D2</key>
-		<string>../..</string>
+		<key>389DFBB2BEA69128F45498211E7D616E671F394B</key>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/mollietaylor/Human.git</string>
+	<string>https://github.com/mollietaylor/The-Iron-Yard-Obj-C.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>5E96A331F4A9398030FDB02675060CE744F6A9D2</string>
+	<string>389DFBB2BEA69128F45498211E7D616E671F394B</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>5E96A331F4A9398030FDB02675060CE744F6A9D2</string>
+			<string>389DFBB2BEA69128F45498211E7D616E671F394B</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Human</string>
+			<string>Obj-C</string>
 		</dict>
 	</array>
 </dict>

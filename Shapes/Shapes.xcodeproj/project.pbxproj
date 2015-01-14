@@ -15,6 +15,9 @@
 		EC1DA9651A65C126007A15D8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC1DA9631A65C126007A15D8 /* LaunchScreen.xib */; };
 		EC1DA9711A65C127007A15D8 /* ShapesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1DA9701A65C127007A15D8 /* ShapesTests.m */; };
 		EC1DA97C1A65C223007A15D8 /* Rectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1DA97B1A65C223007A15D8 /* Rectangle.m */; };
+		EC1DA97F1A65C530007A15D8 /* Ellipse.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1DA97E1A65C530007A15D8 /* Ellipse.m */; };
+		EC1DA9821A65C537007A15D8 /* Triangle.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1DA9811A65C537007A15D8 /* Triangle.m */; };
+		EC1DA9861A6602F6007A15D8 /* Shape.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1DA9851A6602F6007A15D8 /* Shape.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,12 @@
 		EC1DA9701A65C127007A15D8 /* ShapesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShapesTests.m; sourceTree = "<group>"; };
 		EC1DA97A1A65C223007A15D8 /* Rectangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rectangle.h; sourceTree = "<group>"; };
 		EC1DA97B1A65C223007A15D8 /* Rectangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rectangle.m; sourceTree = "<group>"; };
+		EC1DA97D1A65C530007A15D8 /* Ellipse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ellipse.h; sourceTree = "<group>"; };
+		EC1DA97E1A65C530007A15D8 /* Ellipse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ellipse.m; sourceTree = "<group>"; };
+		EC1DA9801A65C537007A15D8 /* Triangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Triangle.h; sourceTree = "<group>"; };
+		EC1DA9811A65C537007A15D8 /* Triangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Triangle.m; sourceTree = "<group>"; };
+		EC1DA9841A6602F6007A15D8 /* Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shape.h; sourceTree = "<group>"; };
+		EC1DA9851A6602F6007A15D8 /* Shape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shape.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +97,7 @@
 				EC1DA9591A65C126007A15D8 /* AppDelegate.m */,
 				EC1DA95B1A65C126007A15D8 /* ViewController.h */,
 				EC1DA95C1A65C126007A15D8 /* ViewController.m */,
-				EC1DA97A1A65C223007A15D8 /* Rectangle.h */,
-				EC1DA97B1A65C223007A15D8 /* Rectangle.m */,
+				EC1DA9831A65C541007A15D8 /* Shapes */,
 				EC1DA95E1A65C126007A15D8 /* Main.storyboard */,
 				EC1DA9611A65C126007A15D8 /* Images.xcassets */,
 				EC1DA9631A65C126007A15D8 /* LaunchScreen.xib */,
@@ -122,6 +130,21 @@
 				EC1DA96F1A65C127007A15D8 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC1DA9831A65C541007A15D8 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				EC1DA9841A6602F6007A15D8 /* Shape.h */,
+				EC1DA9851A6602F6007A15D8 /* Shape.m */,
+				EC1DA97A1A65C223007A15D8 /* Rectangle.h */,
+				EC1DA97B1A65C223007A15D8 /* Rectangle.m */,
+				EC1DA97D1A65C530007A15D8 /* Ellipse.h */,
+				EC1DA97E1A65C530007A15D8 /* Ellipse.m */,
+				EC1DA9801A65C537007A15D8 /* Triangle.h */,
+				EC1DA9811A65C537007A15D8 /* Triangle.m */,
+			);
+			name = Shapes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,10 +247,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC1DA97F1A65C530007A15D8 /* Ellipse.m in Sources */,
 				EC1DA95D1A65C126007A15D8 /* ViewController.m in Sources */,
 				EC1DA95A1A65C126007A15D8 /* AppDelegate.m in Sources */,
 				EC1DA9571A65C126007A15D8 /* main.m in Sources */,
 				EC1DA97C1A65C223007A15D8 /* Rectangle.m in Sources */,
+				EC1DA9821A65C537007A15D8 /* Triangle.m in Sources */,
+				EC1DA9861A6602F6007A15D8 /* Shape.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
