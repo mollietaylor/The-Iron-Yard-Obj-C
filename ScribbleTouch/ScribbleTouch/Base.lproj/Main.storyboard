@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="1" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="9v5-yh-nWj">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="1" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="9v5-yh-nWj">
                                 <rect key="frame" x="6" y="550" width="204" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="2ub-HV-Yio"/>
@@ -211,6 +211,21 @@
                                     <action selector="changeFillColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="P6a-AY-q2w"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nod-lb-MFv">
+                                <rect key="frame" x="212" y="550" width="101" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NHw-DM-whO"/>
+                                    <constraint firstAttribute="width" constant="101" id="SyU-7k-BOU"/>
+                                </constraints>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="reset:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nHU-Pu-dTA"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXq-4b-uNa">
                                 <rect key="frame" x="263" y="499" width="50" height="50"/>
                                 <color key="backgroundColor" red="0.27843137254901962" green="0.25490196078431371" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
@@ -253,7 +268,9 @@
                             <constraint firstItem="npB-5w-bKZ" firstAttribute="top" secondItem="bXI-Mk-vSk" secondAttribute="bottom" constant="1" id="a0f-SM-403"/>
                             <constraint firstItem="N2r-9Y-oMv" firstAttribute="top" secondItem="8Y3-FW-o1W" secondAttribute="bottom" constant="1" id="dwJ-VF-SO6"/>
                             <constraint firstItem="9v5-yh-nWj" firstAttribute="top" secondItem="ITS-b2-rFe" secondAttribute="bottom" constant="1" id="hPH-N3-WXj"/>
+                            <constraint firstItem="fXq-4b-uNa" firstAttribute="trailing" secondItem="nod-lb-MFv" secondAttribute="trailing" id="jig-nr-Yue"/>
                             <constraint firstItem="BhU-AI-nJp" firstAttribute="leading" secondItem="bXI-Mk-vSk" secondAttribute="trailing" constant="8" id="kCN-fl-Kzk"/>
+                            <constraint firstItem="nod-lb-MFv" firstAttribute="top" secondItem="fXq-4b-uNa" secondAttribute="bottom" constant="1" id="mdk-ZD-P0f"/>
                             <constraint firstItem="hoa-LG-cs0" firstAttribute="leading" secondItem="ITS-b2-rFe" secondAttribute="trailing" constant="1" id="niD-75-ixO"/>
                             <constraint firstItem="hoa-LG-cs0" firstAttribute="top" secondItem="bic-l9-Gmq" secondAttribute="bottom" constant="1" id="pyZ-mb-P8n"/>
                             <constraint firstItem="N2r-9Y-oMv" firstAttribute="leading" secondItem="MFl-en-Gve" secondAttribute="trailing" constant="1" id="tRh-t4-WDX"/>
@@ -269,8 +286,8 @@
                                 <exclude reference="Qer-Pe-ktW"/>
                                 <exclude reference="3yc-Pi-m2P"/>
                                 <exclude reference="Bhl-UU-UmX"/>
-                                <exclude reference="ymA-q1-FZQ"/>
                                 <exclude reference="IC6-6z-Scm"/>
+                                <exclude reference="ymA-q1-FZQ"/>
                                 <exclude reference="kCN-fl-Kzk"/>
                                 <exclude reference="OPe-fN-eGS"/>
                             </mask>

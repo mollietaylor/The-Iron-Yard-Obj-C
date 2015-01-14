@@ -49,20 +49,6 @@
     
     CGContextSetLineJoin(context, kCGLineJoinRound);
     CGContextSetLineCap(context, kCGLineCapRound);
-//
-//    CGContextSetLineWidth(context, 10);
-//    
-//    [[UIColor colorWithWhite:0.0 alpha:0.5] set];
-//    
-//    CGContextAddEllipseInRect(context, CGRectMake(10, 10, 200, 200));
-//    
-//    CGContextAddEllipseInRect(context, CGRectMake(10, 100, 200, 200));
-//    
-//    CGContextFillPath(context);
-//    
-//    CGContextAddEllipseInRect(context, CGRectMake(10, 100, 200, 200));
-//    
-//    CGContextStrokePath(context);
     
     for (NSDictionary *scribble in self.scribbles) {
         

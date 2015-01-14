@@ -27,7 +27,7 @@
     
     selectedColor = [UIColor blackColor];
     selectedFillColor = [UIColor clearColor];
-    selectedStrokeWidth = 1;
+    selectedStrokeWidth = 10;
     
 }
 
@@ -46,6 +46,14 @@
 - (IBAction)changeStrokeWidth:(UISlider *)sender {
     
     selectedStrokeWidth = sender.value;
+    
+}
+
+- (IBAction)reset:(UIButton*)sender {
+    
+    ScribbleView *sView = (ScribbleView *) self.view;
+    [sView.scribbles removeAllObjects];
+    [self.view setNeedsDisplay];
     
 }
 
