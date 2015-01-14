@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+IB_DESIGNABLE
+
 @interface Shape : UIView
 
-@property (nonatomic) CGFloat red;
-@property (nonatomic) CGFloat green;
-@property (nonatomic) CGFloat blue;
+@property (nonatomic) IBInspectable UIColor *fillColor;
 
 @end

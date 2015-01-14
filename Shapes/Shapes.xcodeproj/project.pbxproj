@@ -93,14 +93,10 @@
 		EC1DA9531A65C126007A15D8 /* Shapes */ = {
 			isa = PBXGroup;
 			children = (
-				EC1DA9581A65C126007A15D8 /* AppDelegate.h */,
-				EC1DA9591A65C126007A15D8 /* AppDelegate.m */,
 				EC1DA95B1A65C126007A15D8 /* ViewController.h */,
 				EC1DA95C1A65C126007A15D8 /* ViewController.m */,
 				EC1DA9831A65C541007A15D8 /* Shapes */,
 				EC1DA95E1A65C126007A15D8 /* Main.storyboard */,
-				EC1DA9611A65C126007A15D8 /* Images.xcassets */,
-				EC1DA9631A65C126007A15D8 /* LaunchScreen.xib */,
 				EC1DA9541A65C126007A15D8 /* Supporting Files */,
 			);
 			path = Shapes;
@@ -109,6 +105,10 @@
 		EC1DA9541A65C126007A15D8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EC1DA9581A65C126007A15D8 /* AppDelegate.h */,
+				EC1DA9591A65C126007A15D8 /* AppDelegate.m */,
+				EC1DA9611A65C126007A15D8 /* Images.xcassets */,
+				EC1DA9631A65C126007A15D8 /* LaunchScreen.xib */,
 				EC1DA9551A65C126007A15D8 /* Info.plist */,
 				EC1DA9561A65C126007A15D8 /* main.m */,
 			);
@@ -444,6 +444,7 @@
 				EC1DA9761A65C127007A15D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC1DA9771A65C127007A15D8 /* Build configuration list for PBXNativeTarget "ShapesTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +453,7 @@
 				EC1DA9791A65C127007A15D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

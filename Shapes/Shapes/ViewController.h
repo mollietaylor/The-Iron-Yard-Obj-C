@@ -10,12 +10,5 @@
 
 @interface ViewController : UIViewController
 
-- (void)makeTriangleWithX:(CGFloat)x withY:(CGFloat)y withWidth:(CGFloat)width withHeight:(CGFloat)height withRed:(CGFloat)red withGreen:(CGFloat)green withBlue:(CGFloat)blue;
-
-- (void)makeEllipseWithX:(CGFloat)x withY:(CGFloat)y withWidth:(CGFloat)width withHeight:(CGFloat)height withRed:(CGFloat)red withGreen:(CGFloat)green withBlue:(CGFloat)blue;
-
-- (void)makeRectangleWithX:(CGFloat)x withY:(CGFloat)y withWidth:(CGFloat)width withHeight:(CGFloat)height withRed:(CGFloat)red withGreen:(CGFloat)green withBlue:(CGFloat)blue;
-
-
 @end
 

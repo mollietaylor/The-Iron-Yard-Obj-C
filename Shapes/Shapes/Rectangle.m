@@ -12,8 +12,19 @@
 
 - (void)drawRect:(CGRect)rect {
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetRGBFillColor(context, self.red, self.green, self.blue, 1);
+//    CGContextSetRGBFillColor(context, self.red, self.green, self.blue, 1);
+    [self.fillColor set];
     CGContextFillRect(context, rect);
+    
+    
+    // everything after this is unnecessary
+    CGContextMoveToPoint(context, 0, 0);
+    CGContextAddLineToPoint(context, rect.size.width, 0);
+    CGContextAddLineToPoint(context, rect.size.width, rect.size.height);
+    CGContextAddLineToPoint(context, 0, rect.size.height);
+    CGContextAddLineToPoint(context, 0, 0);
+    
+    CGContextFillPath(context);
     
 }
 @end

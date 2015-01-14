@@ -13,16 +13,20 @@
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
-    CGContextRef ctx = UIGraphicsGetCurrentContext();
+
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [self.fillColor set];
     
-    CGContextBeginPath(ctx);
-    CGContextMoveToPoint   (ctx, CGRectGetMinX(rect), CGRectGetMinY(rect));  // top left
-    CGContextAddLineToPoint(ctx, CGRectGetMaxX(rect), CGRectGetMidY(rect));  // mid right
-    CGContextAddLineToPoint(ctx, CGRectGetMinX(rect), CGRectGetMaxY(rect));  // bottom left
-    CGContextClosePath(ctx);
+    CGContextBeginPath(context);
+    CGContextMoveToPoint   (context, CGRectGetMidX(rect), CGRectGetMinY(rect));  // top mid
+    CGContextAddLineToPoint(context, CGRectGetMaxX(rect), CGRectGetMaxY(rect));  // bottom right
+    CGContextAddLineToPoint(context, CGRectGetMinX(rect), CGRectGetMaxY(rect));  // bottom left
+    CGContextClosePath(context);
     
-    CGContextSetRGBFillColor(ctx, self.red, self.green, self.blue, 1);
-    CGContextFillPath(ctx);
+    
+//    CGContextSetRGBFillColor(context, self.red, self.green, self.blue, 1);
+    CGContextFillPath(context);
+    
 }
 
 @end
