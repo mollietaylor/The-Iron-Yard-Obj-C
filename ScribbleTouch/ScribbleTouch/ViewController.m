@@ -19,6 +19,7 @@
     UIColor *selectedColor;
     UIColor *selectedFillColor;
     int selectedStrokeWidth;
+    float selectedAlpha;
 }
 
 - (void)viewDidLoad {
@@ -28,6 +29,7 @@
     selectedColor = [UIColor blackColor];
     selectedFillColor = [UIColor clearColor];
     selectedStrokeWidth = 10;
+    selectedAlpha = 0.5;
     
 }
 
@@ -49,6 +51,13 @@
     
 }
 
+- (IBAction)changeAlpha:(UISlider *)sender {
+
+    selectedAlpha = sender.value;
+
+}
+
+
 - (IBAction)reset:(UIButton*)sender {
     
     ScribbleView *sView = (ScribbleView *) self.view;
@@ -69,6 +78,7 @@
                          @"fillColor":selectedFillColor,
                          @"strokeColor":selectedColor,
                          @"strokeWidth":@(selectedStrokeWidth),
+                         @"alpha":@(selectedAlpha),
                          // when we touch, we start with one point
                          @"points":[@[[NSValue valueWithCGPoint:location]] mutableCopy]
                          

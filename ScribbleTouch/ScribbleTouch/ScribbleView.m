@@ -84,6 +84,8 @@
             
         }
         
+        CGContextSetBlendMode(context, kCGBlendModeMultiply);
+        CGContextSetAlpha(context, [scribble[@"alpha"] floatValue]);
         CGContextFillPath(context);
         
     }
