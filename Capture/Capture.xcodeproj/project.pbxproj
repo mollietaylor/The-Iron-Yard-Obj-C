@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC6AA5EB1A700EF800A8FC9D /* FilterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6AA5EA1A700EF800A8FC9D /* FilterCell.m */; };
 		ECA4660C1A6E98610004963F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA4660B1A6E98610004963F /* main.m */; };
 		ECA4660F1A6E98610004963F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA4660E1A6E98610004963F /* AppDelegate.m */; };
 		ECA466121A6E98610004963F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA466111A6E98610004963F /* ViewController.m */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC6AA5E91A700EF800A8FC9D /* FilterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterCell.h; sourceTree = "<group>"; };
+		EC6AA5EA1A700EF800A8FC9D /* FilterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterCell.m; sourceTree = "<group>"; };
 		ECA466061A6E98610004963F /* Capture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA4660A1A6E98610004963F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECA4660B1A6E98610004963F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,6 +91,8 @@
 				ECA466111A6E98610004963F /* ViewController.m */,
 				ECA4662F1A6EAD8A0004963F /* FilterVC.h */,
 				ECA466301A6EAD8A0004963F /* FilterVC.m */,
+				EC6AA5E91A700EF800A8FC9D /* FilterCell.h */,
+				EC6AA5EA1A700EF800A8FC9D /* FilterCell.m */,
 				ECA466131A6E98610004963F /* Main.storyboard */,
 				ECA466091A6E98610004963F /* Supporting Files */,
 			);
@@ -226,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECA466311A6EAD8A0004963F /* FilterVC.m in Sources */,
+				EC6AA5EB1A700EF800A8FC9D /* FilterCell.m in Sources */,
 				ECA466121A6E98610004963F /* ViewController.m in Sources */,
 				ECA4660F1A6E98610004963F /* AppDelegate.m in Sources */,
 				ECA4660C1A6E98610004963F /* main.m in Sources */,

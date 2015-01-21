@@ -53,7 +53,7 @@
 
 - (void)changeDevice {
     
-    self.cameraPickerController.cameraDevice = (self.deviceChoiceButton.selectedSegmentIndex == 0) ? UIImagePickerControllerCameraDeviceFront : UIImagePickerControllerCameraDeviceRear;
+    self.cameraPickerController.cameraDevice = (self.deviceChoiceButton.selectedSegmentIndex == 0) ? UIImagePickerControllerCameraDeviceRear : UIImagePickerControllerCameraDeviceFront;
     
 }
 
