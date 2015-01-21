@@ -119,7 +119,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QRd-zp-11j">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QRd-zp-11j">
                                 <rect key="frame" x="0.0" y="65" width="320" height="320"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QRd-zp-11j" secondAttribute="height" multiplier="1:1" id="ujr-qk-ZWG"/>
@@ -156,12 +156,31 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IIX-ff-wcF" customClass="SickSlider">
+                                <rect key="frame" x="0.0" y="448" width="320" height="40"/>
+                                <color key="backgroundColor" red="0.15686274510000001" green="0.23921568630000001" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="JvE-cz-EOs"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startPosition">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="sliderColor">
+                                        <color key="value" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="deviceRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="reverseColor" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8cH-h1-rDD" firstAttribute="top" secondItem="uQy-z3-gO9" secondAttribute="bottom" id="GT9-kc-1Ov"/>
+                            <constraint firstItem="uQy-z3-gO9" firstAttribute="top" secondItem="IIX-ff-wcF" secondAttribute="bottom" id="Lvx-Ok-Mzs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IIX-ff-wcF" secondAttribute="trailing" constant="-16" id="M6y-om-sTm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uQy-z3-gO9" secondAttribute="trailing" constant="-16" id="TtW-0h-JXg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QRd-zp-11j" secondAttribute="trailing" constant="-16" id="Wbf-i6-AIh"/>
+                            <constraint firstItem="IIX-ff-wcF" firstAttribute="leading" secondItem="s3K-Lx-Ew3" secondAttribute="leadingMargin" constant="-16" id="itf-lq-fdr"/>
                             <constraint firstItem="QRd-zp-11j" firstAttribute="leading" secondItem="s3K-Lx-Ew3" secondAttribute="leadingMargin" constant="-16" id="lFl-bj-clG"/>
                             <constraint firstItem="uQy-z3-gO9" firstAttribute="leading" secondItem="s3K-Lx-Ew3" secondAttribute="leadingMargin" constant="-16" id="mVL-Iv-mFK"/>
                             <constraint firstItem="QRd-zp-11j" firstAttribute="top" secondItem="sLk-Sq-2tL" secondAttribute="bottom" constant="45" id="vVq-0z-ZBI"/>
@@ -172,6 +191,7 @@
                     <connections>
                         <outlet property="filterCollectionView" destination="uQy-z3-gO9" id="5Od-nr-Xb3"/>
                         <outlet property="filterImageView" destination="QRd-zp-11j" id="Tqm-IB-IMy"/>
+                        <outlet property="slider1" destination="IIX-ff-wcF" id="fnC-Xs-nHK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJU-kM-rLv" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -8,11 +8,13 @@
 
 #import "FilterVC.h"
 #import "FilterCell.h"
+#import "SickSlider.h"
 
-@interface FilterVC () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface FilterVC () <UICollectionViewDataSource, UICollectionViewDelegate, SickSliderDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *filterImageView;
 @property (weak, nonatomic) IBOutlet UICollectionView *filterCollectionView;
+@property (weak, nonatomic) IBOutlet SickSlider *slider1;
 
 @property (nonatomic) NSArray *filters;
 
@@ -24,6 +26,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
+    // disable swipe to go back
+    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+    }
+    
     self.filters = [CIFilter filterNamesInCategory:kCICategoryColorEffect];
     
     NSLog(@"%@", self.filters);
@@ -32,11 +40,19 @@
     self.filterCollectionView.dataSource = self;
     
     self.filterImageView.image = [self filterImage:self.originalImage withFilterName:self.filters[0]];
+    
+    self.slider1.delegate = self;
 }
 
 - (void)setOriginalImage:(UIImage *)originalImage {
     
     _originalImage = originalImage;
+    
+}
+
+- (void)sliderDidFinishUpdatingWithValue:(float)value {
+    
+    NSLog(@"slider is %f", value);
     
 }
 
@@ -52,7 +68,9 @@
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
         
-        UIImage *filterImage = [self filterImage:self.originalImage withFilterName:filterName];
+        UIImage *resizedImage = [self resizeImage:self.originalImage withSize:cell.imageView.frame.size];
+        
+        UIImage *filterImage = [self filterImage:resizedImage withFilterName:filterName];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             
@@ -69,10 +87,25 @@
     
     NSString *filterName = self.filters[indexPath.item];
     
-    UIImage *filterImage = [self filterImage:self.originalImage withFilterName:filterName];
+    UIImage *resizedImage = [self resizeImage:self.originalImage withSize:self.filterImageView.frame.size];
+    
+    UIImage *filterImage = [self filterImage:resizedImage withFilterName:filterName];
     
     self.filterImageView.image = filterImage;
     
+}
+
+- (UIImage *)resizeImage:(UIImage *)originalImage withSize:(CGSize)size {
+    
+    float scale = (originalImage.size.height > originalImage.size.width) ? size.width / originalImage.size.width : size.height / originalImage.size.height;
+    
+    CGSize ratioSize = CGSizeMake(originalImage.size.width * scale, originalImage.size.height * scale);
+    
+    UIGraphicsBeginImageContextWithOptions(ratioSize, NO, 0.0);
+    [originalImage drawInRect:CGRectMake(0, 0, ratioSize.width, ratioSize.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
 }
 
 - (UIImage *)filterImage:(UIImage *)originalImage withFilterName:(NSString *)filterName {
@@ -96,8 +129,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 //
 //{
 //[filter setValue:@0.8f forKey:kCIInputIntensityKey];
