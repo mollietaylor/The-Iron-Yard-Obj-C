@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ScribbleView.h"
+#import "OptionsVC.h"
 
 @interface ViewController ()
 
@@ -26,43 +27,31 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    selectedColor = [UIColor blackColor];
-    selectedFillColor = [UIColor clearColor];
-    selectedStrokeWidth = 10;
-    selectedAlpha = 0.5;
+    OptionsVC *optionsVC = [[OptionsVC alloc] init];
     
-}
-
-- (IBAction)changeColor:(UIButton *)sender {
+    if (!optionsVC.selectedColor) {
+        selectedColor = [UIColor blackColor];
+    } else {
+        selectedColor = optionsVC.selectedColor;
+    }
     
-    selectedColor = sender.backgroundColor;
+    if (!optionsVC.selectedFillColor) {
+        selectedFillColor = [UIColor clearColor];
+    } else {
+        selectedFillColor = optionsVC.selectedFillColor;
+    }
     
-}
-
-- (IBAction)changeFillColor:(UIButton *)sender {
+    if (!optionsVC.selectedStrokeWidth) {
+        selectedStrokeWidth = 10;
+    } else {
+        selectedStrokeWidth = optionsVC.selectedStrokeWidth;
+    }
     
-    selectedFillColor = sender.backgroundColor;
-    
-}
-
-- (IBAction)changeStrokeWidth:(UISlider *)sender {
-    
-    selectedStrokeWidth = sender.value;
-    
-}
-
-- (IBAction)changeAlpha:(UISlider *)sender {
-
-    selectedAlpha = sender.value;
-
-}
-
-
-- (IBAction)reset:(UIButton*)sender {
-    
-    ScribbleView *sView = (ScribbleView *) self.view;
-    [sView.scribbles removeAllObjects];
-    [self.view setNeedsDisplay];
+    if (!optionsVC.selectedAlpha) {
+        selectedAlpha = 0.5;
+    } else {
+        selectedAlpha = optionsVC.selectedAlpha;
+    }
     
 }
 

@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>545D4A3D-07E9-4F50-9B60-B3B8E305D067</string>
+	<string>20E410EC-CBA1-4693-9CA0-144B708757CE</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Basics</string>
+	<string>Capture</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>389DFBB2BEA69128F45498211E7D616E671F394B</key>
 		<string>https://github.com/mollietaylor/The-Iron-Yard-Obj-C.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Basics/Basics.xcodeproj</string>
+	<string>Capture/Capture.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>389DFBB2BEA69128F45498211E7D616E671F394B</key>

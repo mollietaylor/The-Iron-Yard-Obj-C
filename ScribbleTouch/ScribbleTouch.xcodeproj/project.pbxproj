@@ -15,6 +15,7 @@
 		EC3D0EBC1A66C7D100A35A0D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC3D0EBA1A66C7D100A35A0D /* LaunchScreen.xib */; };
 		EC3D0EC81A66C7D100A35A0D /* ScribbleTouchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3D0EC71A66C7D100A35A0D /* ScribbleTouchTests.m */; };
 		EC3D0ED31A66C80500A35A0D /* ScribbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3D0ED21A66C80500A35A0D /* ScribbleView.m */; };
+		EC3D0ED91A67598D00A35A0D /* OptionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3D0ED81A67598D00A35A0D /* OptionsVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		EC3D0EC71A66C7D100A35A0D /* ScribbleTouchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScribbleTouchTests.m; sourceTree = "<group>"; };
 		EC3D0ED11A66C80500A35A0D /* ScribbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScribbleView.h; sourceTree = "<group>"; };
 		EC3D0ED21A66C80500A35A0D /* ScribbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScribbleView.m; sourceTree = "<group>"; };
+		EC3D0ED71A67598D00A35A0D /* OptionsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsVC.h; sourceTree = "<group>"; };
+		EC3D0ED81A67598D00A35A0D /* OptionsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 				EC3D0EB31A66C7D100A35A0D /* ViewController.m */,
 				EC3D0ED11A66C80500A35A0D /* ScribbleView.h */,
 				EC3D0ED21A66C80500A35A0D /* ScribbleView.m */,
+				EC3D0ED71A67598D00A35A0D /* OptionsVC.h */,
+				EC3D0ED81A67598D00A35A0D /* OptionsVC.m */,
 				EC3D0EB51A66C7D100A35A0D /* Main.storyboard */,
 				EC3D0EAB1A66C7D100A35A0D /* Supporting Files */,
 			);
@@ -224,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC3D0ED91A67598D00A35A0D /* OptionsVC.m in Sources */,
 				EC3D0EB41A66C7D100A35A0D /* ViewController.m in Sources */,
 				EC3D0EB11A66C7D100A35A0D /* AppDelegate.m in Sources */,
 				EC3D0ED31A66C80500A35A0D /* ScribbleView.m in Sources */,
