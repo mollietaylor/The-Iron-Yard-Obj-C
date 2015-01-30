@@ -10,6 +10,6 @@
 
 @interface UsersTVC : UITableViewController
 
-@property NSArray *users;
+@property NSMutableArray *users;
 
 @end

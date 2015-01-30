@@ -23,10 +23,35 @@
     
     [[PFUser currentUser] saveInBackground];
     
-    self.friends = [@[] mutableCopy];
+//    self.friends = [@[] mutableCopy];
     
-    PFQuery *friendsQuery = [PFQuery queryWithClassName:@"Users"];
+//    PFQuery *friendsQuery = [PFQuery queryWithClassName:@"Users"];
+//    
+//    [friendsQuery whereKey:@"username" equalTo:@"Mollie"];
+////    [friendsQuery whereKey:@"username" equalTo:[PFUser currentUser]];
+//    
+//    [friendsQuery includeKey:@"friends"];
+//    
+//    [friendsQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//        
+//        if (objects.count > 0) {
+//            self.friends = [objects mutableCopy];
+//        }
+//        
+//        NSLog(@"%@", self.friends);
+//        
+//    }];
 
+    
+    PFQuery *userQuery = [PFUser query];
+#warning Should be current user
+    [userQuery whereKey:@"username" equalTo:@"Mollie"];
+    [userQuery includeKey:@"friends"];
+    NSArray *usersFromQuery = [userQuery findObjects];
+    for (PFUser *friend in usersFromQuery) {
+        self.friends = friend[@"friends"];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,8 +72,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-//    cell.textLabel.text = self.friends[indexPath.row];
-    cell.textLabel.text = @"stuff";
+    cell.textLabel.text = self.friends[indexPath.row];
+//    cell.textLabel.text = @"stuff";
     
     return cell;
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC4FD2DE1A75DF38001A33FD /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4FD2DD1A75DF38001A33FD /* LoginVC.m */; };
 		ECE6C3531A71BA680073D21D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE6C3521A71BA680073D21D /* main.m */; };
 		ECE6C3561A71BA680073D21D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE6C3551A71BA680073D21D /* AppDelegate.m */; };
 		ECE6C35C1A71BA680073D21D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECE6C35A1A71BA680073D21D /* Main.storyboard */; };
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC4FD2DC1A75DF38001A33FD /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		EC4FD2DD1A75DF38001A33FD /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		ECE6C34D1A71BA680073D21D /* My Friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Friends.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECE6C3511A71BA680073D21D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECE6C3521A71BA680073D21D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 			children = (
 				ECE6C3541A71BA680073D21D /* AppDelegate.h */,
 				ECE6C3551A71BA680073D21D /* AppDelegate.m */,
+				EC4FD2DC1A75DF38001A33FD /* LoginVC.h */,
+				EC4FD2DD1A75DF38001A33FD /* LoginVC.m */,
 				ECE6C3911A71BC8B0073D21D /* FriendsTVC.h */,
 				ECE6C3921A71BC8B0073D21D /* FriendsTVC.m */,
 				ECE6C3941A71BCA60073D21D /* UsersTVC.h */,
@@ -286,6 +291,7 @@
 			files = (
 				ECE6C3961A71BCA60073D21D /* UsersTVC.m in Sources */,
 				ECE6C3561A71BA680073D21D /* AppDelegate.m in Sources */,
+				EC4FD2DE1A75DF38001A33FD /* LoginVC.m in Sources */,
 				ECE6C3931A71BC8B0073D21D /* FriendsTVC.m in Sources */,
 				ECE6C3531A71BA680073D21D /* main.m in Sources */,
 			);
@@ -486,6 +492,7 @@
 				ECE6C3721A71BA680073D21D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ECE6C3731A71BA680073D21D /* Build configuration list for PBXNativeTarget "My FriendsTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +501,7 @@
 				ECE6C3751A71BA680073D21D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

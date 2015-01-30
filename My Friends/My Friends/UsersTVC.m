@@ -19,17 +19,32 @@
     [super viewDidLoad];
     
 //    PFQuery *userQuery = [PFQuery queryWithClassName:@"User"];
+//    PFQuery *userQuery = [PFUser query];
+//    NSArray *usersFromQuery = [userQuery findObjects];
+//    NSLog(@"%@", usersFromQuery);
+//    
+//    if (usersFromQuery.count > 0) {
+//        
+//        self.users = usersFromQuery;
+//        
+//        [self.tableView reloadData];
+//        
+//    }
+
+    
+    
     PFQuery *userQuery = [PFUser query];
+#warning Should be current user
     NSArray *usersFromQuery = [userQuery findObjects];
     NSLog(@"%@", usersFromQuery);
-    
-    if (usersFromQuery.count > 0) {
-        
-        self.users = usersFromQuery;
-        
+    for (PFUser *user in usersFromQuery) {
+        NSLog(@"%@", user[@"username"]);
+        [self.users addObject:user[@"username"]];
         [self.tableView reloadData];
-        
     }
+    
+    NSLog(@"%@", self.users);
+    
     
     
 }
